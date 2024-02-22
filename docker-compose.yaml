@@ -1,0 +1,23 @@
+version: '1'
+ 
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html 
+      - ./ContactForm.html:/usr/share/nginx/html/ContactForm.html 
+      - ./Test.html:/usr/share/nginx/html/Test.html 
+      - ./Team.html:/usr/share/nginx/html/Team.html 
+      - ./Inpressum.html:/usr/share/nginx/html/Inpressum.html 
+      - ./Home.html:/usr/share/nginx/html/Home.html 
+      - ./Fish.html:/usr/share/nginx/html/Fish.html 
+      - ./Fish:/usr/share/nginx/html/Fish
+      - ./Bilder:/usr/share/nginx/html/Bilder
+      - ./styles.css:/usr/share/nginx/html/styles.css
+    networks:
+      - webnet
+ 
+networks:
+  webnet:
